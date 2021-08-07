@@ -1,0 +1,400 @@
+
+
+
+<div id="attune-blueprint-toc">
+    
+
+
+
+        <ul>
+            
+                
+
+<li>
+    <a href="#link1">1 - NP Update Package Lists</a>
+</li>
+
+                
+
+<li>
+    <a href="#link2">2 - NP Upgrade Packages</a>
+</li>
+
+        </ul>
+
+
+</div>
+
+<div id="attune-blueprint-contents">
+    <p class="text-muted">Exported on <strong>07-Aug-2021 10:31:42</strong></p>
+
+    
+
+<style type="text/css">
+    .attune-doc-tcp-pre-wait {
+
+    }
+
+
+    .attune-doc-tcp-port {
+
+    }
+
+
+    .attune-doc-tcp-downtime {
+
+    }
+
+
+    .attune-doc-tcp-post-wait {
+
+    }
+
+
+    .attune-doc-files-filename {
+
+    }
+
+    .attune-doc-files-remote-path {
+
+    }
+
+    .attune-connection-changed-warning {
+
+    }
+
+    .attune-doc-connection {
+
+    }
+
+    .attune-doc-script-command {
+
+    }
+
+    .attune-doc-script-filename {
+
+    }
+
+    .attune-doc-instruction-text {
+        opacity: 0.5;
+    }
+
+    .attune-doc-script-text {
+        opacity: 0.5;
+    }
+
+    .attune-doc-login-user {
+        font-weight: bold;
+        white-space: pre;
+        font-family: monospace;
+    }
+
+    .attune-doc-login-node {
+        font-weight: bold;
+        white-space: pre;
+        font-family: monospace;
+    }
+
+    .attune-doc-login-oracle {
+        font-weight: bold;
+        white-space: pre;
+        font-family: monospace;
+    }
+
+    .attune-doc-script-type {
+        font-weight: bold;
+        white-space: pre;
+        font-family: monospace;
+    }
+
+    .attune-doc-script-interpreter {
+        font-weight: bold;
+        white-space: pre;
+        font-family: monospace;
+    }
+
+    .attune-doc-expander {
+        display: none;
+    }
+
+    .attune-doc-expander-hide-button {
+
+    }
+
+    .attune-doc-expander-show-button {
+
+    }
+
+    .attune-doc-step-comment {
+
+    }
+
+    .attune-doc-root-comment {
+
+    }
+
+</style>
+
+
+
+<script>
+    function toggleShow(divId) {
+        function toggleClass(div, class_) {
+            if (div.className.indexOf(class_) === -1) {
+                div.className += " " + class_;
+            } else {
+                div.className = div.className.replace(class_, "");
+            }
+        }
+        let nodes = document
+                .querySelectorAll('[attune-expand="' + divId + '"]');
+        let divClass = "attune-doc-hide";
+        for (let i = 0; i < nodes.length; i++) {
+            toggleClass(nodes[i], divClass);
+        }
+
+        nodes = document
+                .querySelectorAll('[attune-expand-button="' + divId + '"]');
+        let showButtonClass = "attune-doc-expander-show-button";
+        let hideButtonClass = "attune-doc-expander-hide-button";
+        for (let i = 0; i < nodes.length; i++) {
+            let div = nodes[i];
+            toggleClass(div, showButtonClass);
+            toggleClass(div, hideButtonClass);
+        }
+    }
+</script>
+
+
+    
+
+
+<h2>Parameters</h2>
+
+<button onclick="toggleShow('0')"
+        attune-expand-button="0"
+        class="attune-doc-button attune-doc-expander-show-button">
+</button>
+<div attune-expand="0" class="attune-doc-expander attune-doc-hide">
+<table>
+    <thead>
+            <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Type
+                </th>
+                <th>
+                    Script Reference
+                </th>
+                <th>
+                    Default Value
+                </th>
+                <th>
+                    Comment
+                </th>
+            </tr>
+    </thead>
+    <tbody>
+            <tr>
+                <td>
+                    Linux Node
+                </td>
+                <td>
+                    Linux / Unix Server
+                </td>
+                <td>
+                    linuxNode
+                </td>
+                <td>
+                    
+                </td>
+                <td>
+                    
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    Linux User
+                </td>
+                <td>
+                    Linux OS Credential
+                </td>
+                <td>
+                    linuxUser
+                </td>
+                <td>
+                    
+                </td>
+                <td>
+                    
+                </td>
+                <td></td>
+            </tr>
+    </tbody>
+</table>
+</div>
+    
+
+
+        
+
+<!-- BEGIN STEP -->
+<div>
+    <h3 id="link1">1 - NP Update Package Lists</h3>
+    <button onclick="toggleShow('1')"
+            attune-expand-button="1"
+            class="attune-doc-button attune-doc-expander-show-button">
+    </button>
+
+
+    
+
+
+    
+
+    
+
+
+
+    <div class="attune-connection-changed-warning">
+        The connection details have changed from the last step.<br>
+        Make sure you reconnect.
+    </div>
+
+<div>
+    <p class="attune-doc-connection">
+            <span class="attune-doc-instruction-text">Login as user</span>
+            <span class="attune-doc-login-user">{Linux User}</span>
+
+            <span class="attune-doc-instruction-text">on node</span>
+            <span class="attune-doc-login-node">{Linux Node}</span>
+
+    </p>
+
+            <div attune-expand="1" class="attune-doc-expander attune-doc-hide">
+                Connect via SSH
+                <pre>ssh user@hostname</pre>
+
+            </div>
+
+
+
+</div>
+
+
+
+        
+
+
+
+
+
+
+<div attune-expand="1" class="attune-doc-expander attune-doc-hide">
+    <span class="attune-doc-script-text">This is a</span>
+    <span class="attune-doc-script-type">Bash Script</span>
+    <span class="attune-doc-script-text">make sure you run it with</span>
+    <span class="attune-doc-script-interpreter">bash -l</span>
+    <span class="attune-doc-script-text">from a terminal session</span>
+</div>
+
+<div class="hcb_wrap">
+    <button class="hcb-clipboard" data-clipboard-target="[data-hcb-clip=&quot;1&quot;]" data-clipboard-action="copy"></button>
+<pre class="prism line-numbers  language-bash">
+<code class=" language-bash" data-hcb-clip="1">
+apt-get update
+ 
+</code>
+</pre>
+</div>
+
+
+
+
+</div>
+<!-- END STEP -->
+
+
+
+        
+
+<!-- BEGIN STEP -->
+<div>
+    <h3 id="link2">2 - NP Upgrade Packages</h3>
+    <button onclick="toggleShow('2')"
+            attune-expand-button="2"
+            class="attune-doc-button attune-doc-expander-show-button">
+    </button>
+
+
+    
+
+
+    
+
+    
+
+
+
+
+<div>
+    <p class="attune-doc-connection">
+            <span class="attune-doc-instruction-text">Login as user</span>
+            <span class="attune-doc-login-user">{Linux User}</span>
+
+            <span class="attune-doc-instruction-text">on node</span>
+            <span class="attune-doc-login-node">{Linux Node}</span>
+
+    </p>
+
+            <div attune-expand="2" class="attune-doc-expander attune-doc-hide">
+                Connect via SSH
+                <pre>ssh user@hostname</pre>
+
+            </div>
+
+
+
+</div>
+
+
+
+        
+
+
+
+
+
+
+<div attune-expand="2" class="attune-doc-expander attune-doc-hide">
+    <span class="attune-doc-script-text">This is a</span>
+    <span class="attune-doc-script-type">Bash Script</span>
+    <span class="attune-doc-script-text">make sure you run it with</span>
+    <span class="attune-doc-script-interpreter">bash -l</span>
+    <span class="attune-doc-script-text">from a terminal session</span>
+</div>
+
+<div class="hcb_wrap">
+    <button class="hcb-clipboard" data-clipboard-target="[data-hcb-clip=&quot;1&quot;]" data-clipboard-action="copy"></button>
+<pre class="prism line-numbers  language-bash">
+<code class=" language-bash" data-hcb-clip="1">
+apt-get upgrade -y
+ 
+</code>
+</pre>
+</div>
+
+
+
+
+</div>
+<!-- END STEP -->
+
+
+
+
+
+</div>
